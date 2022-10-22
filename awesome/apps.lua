@@ -37,7 +37,8 @@ apps.default = {
 local run_on_start_up = {
     "picom",
     "redshift",
-    "unclutter"
+    "unclutter",
+    "fcitx5 -d",
 }
 
 
