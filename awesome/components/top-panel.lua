@@ -22,7 +22,11 @@ local screen = awful.screen.focused()
 local task_list = require("widgets.task-list")
 local tag_list = require('widgets.tag-list')
 local vseparator = require("widgets.vertical-separator")
-local battery = require('widgets.battery')
+--local battery = require('widgets.battery')
+
+-- local battery_widget = require("awesome-wm-widgets.battery-widget.battery")
+local battery_widget = require("awesome-wm-widgets.batteryarc-widget.batteryarc")
+
 local layout_box = require("widgets.layout-box")
 local calendar = require("widgets.calendar")
 
@@ -75,9 +79,10 @@ top_panel.create = function(s)
          },
          vseparator,
          {
-               	battery,
+		battery_widget(),
+               --	battery,
                	shape = gears.shape.rounded_bar,
-               	shape_border_width = 1000,
+               	-- shape_border_width = 30,
               	bg = "#283039",
                	widget = wibox.container.background
          },

@@ -133,7 +133,11 @@ watch("acpi -i", 1,
          battery_icon_name = battery_icon_name .. "-" .. rounded_charge
       end
 
-      widget.icon:set_image(PATH_TO_ICONS .. battery_icon_name .. ".svg")
+      -- widget.icon:set_image(PATH_TO_ICONS .. battery_icon_name .. ".svg")
+      widget.icon:set_image("~/.config/awesome/icons/battery/battery-10.svg")
+      -- -- widget.icon:set_image("/home/feng/.config/awesome/icons/battery/battery.svg")
+      -- widget.icon:set_image("/home/feng/.config/awesome/icons/battery/battery-charging-10.svg")
+      widget.icon:set_image("/home/feng/.config/awesome/icons/close.svg")
       -- Update popup text
       battery_popup.text = string.gsub(stdout, "\n$", "")
       collectgarbage("collect")
